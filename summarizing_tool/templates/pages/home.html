@@ -1,57 +1,62 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'css/home.css' %}">
   <title>countBugZero</title>
 </head>
+
 <body>
-  <div class="header">
-    <div class="logo">
-        Your Logo
+  <div class="box_container">
+    <div class="header">
+      <div class="logo">
+        <b>SỰ RA ĐỜI CỦA MỘT SIÊU PHẨM MANG TÊN YOBOY</b>
+      </div>
+      <div class="sign-in-container">
+        <button class="button_sign_in">
+          <a href="{% url 'sign_in' %}" class="no-underline">Sign In</a>
+        </button>
+      </div>
     </div>
-    <div class="sign-in-container">
-      <button class="sign-in-btn"><a href="{% url 'sign_in' %}">Sign In</a></button>
+    <div class="baner">
+      <!-- <img src="{% static 'images/banner.png' %}" alt="Lỗi hình"> -->
     </div>
-  </div>
-  <div class="baner">
-    <div>
-        <img src="{% static 'images/banner.png' %}" alt="Lỗi hình">
+    <div class="Upload-container">
+      <button class="upload-btn">Upload (.doc,.pdf) </button>
     </div>
-  </div>
-  <div class="Upload-container">
-    <button class="upload-btn">Upload (.doc,.pdf) </button>
-  </div>
-  <div class="note_container">
-    <button class="button_note" id="toggleNote" onclick="toggleNote()">
-      List file upload
-    </button>
-    <div id="note_hide" class="hidden">
-      <p>Uploaded Files:</p>
-      <ul id="fileList"></ul>
+    <div class="note_container">
+      <button class="button_note" id="toggleNote" onclick="toggleNote()">
+        List file upload
+      </button>
+      <div id="note_hide" class="hidden">
+        <p>Uploaded Files:</p>
+        <ul id="fileList"></ul>
+      </div>
     </div>
-  </div>
-  <script src="script.js"></script>
-  <div class="file_uploaded">
-  <div class="part2">
-    <div class="input_box">
-        <textarea class="from-text" placeholder="Enter text"></textarea></textarea>
-        <textarea class="to-text" placeholder="Translation"></textarea></textarea>
+    <script src="script.js"></script>
+    <div class="file_uploaded">
+      <div class="part2">
+        <div class="input_box">
+          <textarea class="from-text" placeholder="Enter text"></textarea></textarea>
+          <textarea class="to-text" placeholder="Translation"></textarea></textarea>
+        </div>
+        <div class="option">
+          <label for="Types of summarizer">Types of summarizer:</label>
+          <select id="cars" name="cars">
+            <option value="">...</option>
+            <option value="">...</option>
+            <option value="">...</option>
+            <option value="">...</option>
+          </select>
+        </div>
+        <div class="submit">
+          <input type="submit" value="Summarize">
+        </div>
+      </div>
     </div>
-    <div class="option">
-        <label for="Types of summarizer">Types of summarizer:</label>
-            <select id="cars" name="cars">
-                <option value="">...</option>
-                <option value="">...</option>
-                <option value="">...</option>
-                <option value="">...</option>
-            </select>
-    </div>
-    <div class="submit">
-        <input type="submit" value="Summarize">
-    </div>
-  </div>
 </body>
+
 </html>

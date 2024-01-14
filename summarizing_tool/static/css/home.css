@@ -1,165 +1,202 @@
 body {
-    margin: 0;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6)
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000000; /* Màu nền của header */
-    padding: 10px;
-  }
-  
-  .logo {
-    color: white; /* Màu chữ của logo */
-    font-size: 24px;
-  }
-  
-  .sign-in-container {
-    text-align: right;
-  }
-  
-  .sign-in-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    background-color: blue; /* Màu nền */
-    color: white; /* Màu chữ */
-    border: 1px solid blue; /* Viền */
-    border-radius: 4px; /* Bo góc */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .sign-in-btn:hover {
-    background-color: #45a049; /* Màu nền khi hover */
-  }
-  .baner {
-        display: flex;
-        justify-content: center;
-        height: 60vh;
-        margin: 0;  
-      img {
-        max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của cha */
-        height: auto; /* Đảm bảo tỷ lệ khung hình bảo toàn */
-        display: block; /* Loại bỏ khoảng trắng dưới hình ảnh */
-      }
-  }
-  .Upload-container{
-    text-align: center;
-  }
-  .upload-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    background-color: blue; /* Màu nền */
-    color: white; /* Màu chữ */
-    border: 1px solid blue; /* Viền */
-    border-radius: 4px; /* Bo góc */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  .note_container {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .button_note {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    background-color: blue; /* Màu nền */
-    color: white; /* Màu chữ */
-    border: 1px solid blue; /* Viền */
-    border-radius: 4px; /* Bo góc */
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  #note_hide {
-    position: absolute;
-    top : 10%;
-    left: 100px; /* Khoảng cách giữa nút và note */
-    transform: translateY(-50%);
-    background-color: #f2f2f2;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  .hidden {
-    display: none;
-  }
-  
-.file_uploaded{
-    display: flex;
-    height: 70vh;
-    justify-content: center;
-    align-items: center;
+  margin: 0;
 }
 
-.part2{
-    max-width: 700px;
-    width: 100%;
-    padding: 25px 30px;
-    background: #fff;
+.box_container {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
 
-.part2 .input_box{
-    display: flex;
-    border-radius: 5px;
-    border: 1px solid #bbb;
+.header {
+  position: relative;
+  width: 100%;
+  height: 60px;
 }
 
-.input_box .to-text{
-    border-radius: 0px;
-    border: 1px solid #bbb;
+.logo {
+  position: relative;
+  display: inline-block;
+  width: 800px;
+  height: 40px;
+  color: white;
+  font-size: 30px;
+  margin-left: 50px;
+  margin-top: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: palevioletred;
+}
+
+.sign-in-container {
+  position: relative;
+  display: inline-block;
+  text-align: right;
+  width: 150px;
+  height: auto;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  float: right;
+  margin-top: 20px;
+}
+
+.button_sign_in {
+  border: none;
+  color: white;
+  width: 100px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+
+button:hover {
+  background-color: #45a049;
+}
+
+.baner {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-image: url(../images/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.Upload-container {
+  text-align: center;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  /* Màu nền */
+  color: black;
+  /* Màu chữ */
+  border: none;
+  /* Viền */
+  border-radius: 4px;
+  /* Bo góc */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.note_container {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+.button_note {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  /* Màu nền */
+  color: black;
+  /* Màu chữ */
+  border: none;
+  /* Viền */
+  border-radius: 4px;
+  /* Bo góc */
+  padding: 10px;
+  cursor: pointer;
+}
+
+#note_hide {
+  position: absolute;
+  top: 10%;
+  left: 100px;
+  /* Khoảng cách giữa nút và note */
+  transform: translateY(-50%);
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+.file_uploaded {
+  display: flex;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.part2 {
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 30px;
+  background: #fff;
+}
+
+.part2 .input_box {
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+}
+
+.input_box .to-text {
+  border-radius: 0px;
+  border: 1px solid #bbb;
 }
 
 .input_box textarea {
-    height: 200px;
-    width: 100%;     
-    border: none;
-    outline: none;
-    font-size: 18px;
-    background: none;
-    resize: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+  height: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: none;
+  resize: none;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 
 .option {
-    height: 25px;
-    width: 200px;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    border-radius: 5px;
+  height: 25px;
+  width: 200px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 
 .submit input {
-    width: 100%;
-    padding: 14px;
-    margin-top: 20px;
-    border:none;
-    outline: none;
-    font-size: 17px;
-    cursor: pointer;
-    color: #fff;
-    background: #5372F0;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  cursor: pointer;
+  color: #fff;
+  background: #5372F0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
- 
+
 input:hover {
-  background-color: #45a049; /* Màu nền khi hover */
+  background-color: #45a049;
+  /* Màu nền khi hover */
 }
