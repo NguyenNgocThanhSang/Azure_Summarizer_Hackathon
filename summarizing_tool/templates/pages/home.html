@@ -25,7 +25,7 @@
       <!-- <img src="{% static 'images/banner.png' %}" alt="Lỗi hình"> -->
     </div>
     <div class="Upload-container" id="Upload-container">
-      <button class="upload-btn" id="button_upload">Upload (.doc,.pdf) </button>
+      <button class="upload-btn" id="button_upload">Upload (.doc,.pdf) <input type="file" id="upload-file"> </button>
     </div>
     <div class="note_container" id="note_container">
       <button class="button_note" id="toggleNote" onclick="toggleNote()">
@@ -36,12 +36,13 @@
         <ul id="fileList"></ul>
       </div>
     </div>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <div class="file_uploaded" id="file_uploaded">
       <div class="part2" id="part2">
         <div class="input_box" id="input_box">
-          <textarea class="from-text" id="from-text" placeholder="Enter text"></textarea></textarea>
-          <textarea class="to-text" id="to-text" placeholder="Translation"></textarea></textarea>
+          {% csrf_token %}
+          <textarea class="from-text" id="from-text" placeholder="Enter text"></textarea>
+          <div class="to-text" id="to-text" placeholder="Summary">Có gì trong này không? Dài hơn tí tí đi</div>
         </div>
         <div class="option" id="option">
           <label for="Types of summarizer">Types of summarizer:</label>
@@ -53,10 +54,15 @@
           </select>
         </div>
         <div class="submit" id="submit">
-          <input type="submit" id="input_submit" value="Summarize">
-        </div>
+          <input type="submit" id="input_submit" value="Summarize" onclick="summarizeText()">
       </div>
     </div>
+    <script src="{% static 'js/home.js' %}"></script>
+    <!-- Trong file HTML hoặc template -->
+<script>
+  var summarizeUrl = '{% url "summarize" %}';
+</script>
+
 </body>
 
 </html>

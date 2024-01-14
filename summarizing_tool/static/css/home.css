@@ -156,8 +156,18 @@ button:hover {
 }
 
 .input_box .to-text {
-  border-radius: 0px;
+  /* border-radius: 0px;
   border: 1px solid #bbb;
+  width: 50%; */
+  height: 200px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: none;
+  resize: none;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 
 .input_box textarea {

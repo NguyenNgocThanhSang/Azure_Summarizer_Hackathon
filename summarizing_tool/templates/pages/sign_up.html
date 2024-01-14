@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/sign_up.css' %}">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="sign_up">
+        <h1 class="Title">SIGN UP</h1>
+        <div class="box_input">
+            <div class="gender_option">
+                <!--Not do it yet-->
+            </div>
+
+            <div class="name_box">
+                <h2>Name</h2>
+                <textarea class="name" placeholder="Enter your full name" required></textarea>
+            </div>
+
+            <div class="password_box">
+                <h2>Password</h2>
+                <textarea class="password" id="passwordField" placeholder="Enter your password" required></textarea>
+            </div>
+
+            <div class="confirm-password_box">
+                <h2>Confirm Password</h2>
+                <textarea class="confirm-password" id="confirmpasswordField" placeholder="Confirm your password" required></textarea>
+            </div>
+        </div>
+        <div class="signup">
+            <input type="submit" value="Sign up">
+        </div>
+    </div>
+    <script src="{% static 'js/sign_up.js' %}"></script>
+</body>
+</html>
